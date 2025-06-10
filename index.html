@@ -1,97 +1,132 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>二维码防骗指南😂</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        danger: '#e53e3e',
-                        fun: '#f6ad55',
-                    },
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>二维码安全警告</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow-y: scroll; /* 允许垂直滚动 */
+    }
+
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .warning-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
+      border: 2px solid #e53e3e;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .warning-box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .safety-principles {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #000;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .safety-principles h3 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .safety-principles ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    .safety-principles li {
+      margin-bottom: 10px;
+    }
+
+    .action-btn {
+      display: block;
+      width: 200px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background-color: #e53e3e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 0 auto;
+      transition: all 0.3s ease;
+    }
+
+    .action-btn:hover {
+      background-color: #c92a2a;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 font-sans">
-    <!-- 顶部警告条 -->
-    <div class="bg-danger text-white text-center py-2 font-bold animate-pulse">
-        😱 扫码需谨慎！小心扫出大麻烦！😱
-    </div>
-
-    <!-- 主要内容 -->
-    <main class="container mx-auto px-4 py-12 max-w-3xl">
-        <div class="text-center mb-10">
-            <h1 class="text-[clamp(2rem,6vw,3.5rem)] font-black text-dark mb-4">
-                不是哥们<br>
-                <span class="text-danger animate-bounce">二维码不能乱扫啊！</span>
-            </h1>
-            <p class="text-gray-600 text-lg">
-                再扫小心你的钱包👛 手机📱 还有尊严💔
-            </p>
-        </div>
-
-        <!-- 警告卡片 -->
-        <div class="bg-white rounded-xl p-6 shadow-2xl border-4 border-danger mb-10 transform hover:scale-105 transition-transform duration-300">
-            <div class="flex items-center justify-center mb-4">
-                <i class="fa fa-exclamation-triangle text-5xl text-danger animate-pulse"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-center text-dark mb-4">扫码三大定律</h2>
-            <ul class="space-y-3 text-gray-700">
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-danger mt-1 mr-2"></i>
-                    <span>扫码前先问：这是啥？谁发的？为啥要扫？</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-danger mt-1 mr-2"></i>
-                    <span>扫码后发现要填密码/银行卡号 → 立刻退出！</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fa fa-check-circle text-danger mt-1 mr-2"></i>
-                    <span>如果扫码后手机异常 → 赶紧找专业人士！</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- 风险区域 -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-            <div class="bg-white rounded-lg p-4 shadow-lg border-2 border-danger text-center transform hover:scale-105 transition-transform duration-300">
-                <i class="fa fa-credit-card text-3xl text-danger mb-2"></i>
-                <h3 class="font-bold text-dark">钱包空空</h3>
-            </div>
-            <div class="bg-white rounded-lg p-4 shadow-lg border-2 border-warning text-center transform hover:scale-105 transition-transform duration-300">
-                <i class="fa fa-user-secret text-3xl text-warning mb-2"></i>
-                <h3 class="font-bold text-dark">信息泄露</h3>
-            </div>
-            <div class="bg-white rounded-lg p-4 shadow-lg border-2 border-fun text-center transform hover:scale-105 transition-transform duration-300">
-                <i class="fa fa-mobile text-3xl text-fun mb-2"></i>
-                <h3 class="font-bold text-dark">手机变砖</h3>
-            </div>
-        </div>
-
-        <!-- 总结 -->
-        <div class="bg-fun/20 rounded-xl p-6 text-center">
-            <h2 class="text-2xl font-bold text-dark mb-4">记住一句话：</h2>
-            <p class="text-lg font-bold text-danger mb-4">
-                扫码一时爽，<br>
-                追悔终生泪两行！😭
-            </p>
-            <button class="bg-danger hover:bg-danger/90 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                我记住了！再也不乱扫！
-            </button>
-        </div>
-    </main>
-
-    <!-- 页脚 -->
-    <footer class="bg-dark text-white py-4 text-center">
-        <p>© 2023 二维码防骗联盟 - 让天下没有好骗的二维码</p>
-    </footer>
-</body>
-</html>
     
+<body>
+  <div class="video-container">
+    <!-- 替换为实际国内可访问的视频嵌入地址，比如 B 站的正确视频 iframe 代码 -->
+    <iframe src="https://player.bilibili.com/player.html?bvid=BV1GJ411x7h7"
+      allowfullscreen="allowfullscreen"></iframe>
+  </div>
+  <div class="content">
+    <h1>不是哥们<br><span style="color: #e53e3e;">二维码不能乱扫啊！！！</span></h1>
+    <div class="warning-box">
+      <h2>乱扫二维码 = 被鬼畜支配！</h2>
+      <p>就像无法停止的鬼畜循环，<br>乱扫二维码也会让你陷入信息泄露的无尽深渊！</p>
+      <p style="margin-top: 10px;">记住这个教训：<br><em>"扫码不规范，亲人两行泪..."</em></p>
+    </div>
+    <div class="safety-principles">
+      <h3><i class="fa fa-shield" style="color: #e53e3e; margin-right: 5px;"></i>安全三原则</h3>
+      <ul>
+        <li>不扫来源不明的二维码</li>
+        <li>不轻易在扫码后输入个人信息</li>
+        <li>遇到可疑二维码，直接关闭页面</li>
+      </ul>
+    </div>
+    <a href="#" class="action-btn">我明白了，再也不乱扫！</a>
+  </div>
+</body>
+
+</html>
