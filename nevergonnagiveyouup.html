@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二维码防骗指南😂</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        danger: '#e53e3e',
+                        fun: '#f6ad55',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- 顶部警告条 -->
+    <div class="bg-danger text-white text-center py-2 font-bold animate-pulse">
+        😱 扫码需谨慎！小心扫出大麻烦！😱
+    </div>
+
+    <!-- 主要内容 -->
+    <main class="container mx-auto px-4 py-12 max-w-3xl">
+        <div class="text-center mb-10">
+            <h1 class="text-[clamp(2rem,6vw,3.5rem)] font-black text-dark mb-4">
+                不是哥们<br>
+                <span class="text-danger animate-bounce">二维码不能乱扫啊！</span>
+            </h1>
+            <p class="text-gray-600 text-lg">
+                再扫小心你的钱包👛 手机📱 还有尊严💔
+            </p>
+        </div>
+
+        <!-- 警告卡片 -->
+        <div class="bg-white rounded-xl p-6 shadow-2xl border-4 border-danger mb-10 transform hover:scale-105 transition-transform duration-300">
+            <div class="flex items-center justify-center mb-4">
+                <i class="fa fa-exclamation-triangle text-5xl text-danger animate-pulse"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-center text-dark mb-4">扫码三大定律</h2>
+            <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                    <i class="fa fa-check-circle text-danger mt-1 mr-2"></i>
+                    <span>扫码前先问：这是啥？谁发的？为啥要扫？</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa fa-check-circle text-danger mt-1 mr-2"></i>
+                    <span>扫码后发现要填密码/银行卡号 → 立刻退出！</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa fa-check-circle text-danger mt-1 mr-2"></i>
+                    <span>如果扫码后手机异常 → 赶紧找专业人士！</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 风险区域 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            <div class="bg-white rounded-lg p-4 shadow-lg border-2 border-danger text-center transform hover:scale-105 transition-transform duration-300">
+                <i class="fa fa-credit-card text-3xl text-danger mb-2"></i>
+                <h3 class="font-bold text-dark">钱包空空</h3>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-lg border-2 border-warning text-center transform hover:scale-105 transition-transform duration-300">
+                <i class="fa fa-user-secret text-3xl text-warning mb-2"></i>
+                <h3 class="font-bold text-dark">信息泄露</h3>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-lg border-2 border-fun text-center transform hover:scale-105 transition-transform duration-300">
+                <i class="fa fa-mobile text-3xl text-fun mb-2"></i>
+                <h3 class="font-bold text-dark">手机变砖</h3>
+            </div>
+        </div>
+
+        <!-- 总结 -->
+        <div class="bg-fun/20 rounded-xl p-6 text-center">
+            <h2 class="text-2xl font-bold text-dark mb-4">记住一句话：</h2>
+            <p class="text-lg font-bold text-danger mb-4">
+                扫码一时爽，<br>
+                追悔终生泪两行！😭
+            </p>
+            <button class="bg-danger hover:bg-danger/90 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                我记住了！再也不乱扫！
+            </button>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-4 text-center">
+        <p>© 2023 二维码防骗联盟 - 让天下没有好骗的二维码</p>
+    </footer>
+</body>
+</html>
+    
